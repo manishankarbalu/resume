@@ -1,0 +1,158 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge MANISHANKAR \textsc{BALASUBRAMANIAN}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Place and Date of Birth:} & CHENNAI, INDIA  | 05 JANUARY 1997 \\
+    \textsc{Address:}   & PLOT 14, LIC COLONY, TRICHY, TN 620021, INDIA \\
+    \textsc{Phone:}     & +(91) 8438431163\\
+    \textsc{email:}     &  \href{mailto:manishankarbalu@gmail.com}{manishankarbalu@gmail.com}\\
+    \textsc{github:}    & https://github.com/manishankarbalu 
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Education}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & B.Tech at \textsc{College of Engineering Guindy, Chennai}\\\textsc{Aug 2014-Apr2018}&\emph{Information Science and Technology}\hfill CGPA: 8.6\multicolumn{2}{c}{} \\
+ \textsc{Jun-Apr 2014} & \textsuperscript HighSchool at \textsc{SRV Matriculation Higher Secondary School},Trichy\\    \hfill Percentage: 97.8\multicolumn{2}{c}{} \\\\
+\textsc{Jun-Apr 2011} & TN SSC at \textsc{ Alpha Plus Matriculation Higher Secondary School}, Trichy\hfill Percentage: 96.6
+\end{tabular}
+
+%Section: Education
+\section{Technology skills}
+\begin{tabular}{rl}
+ \textsc{Programming Languages:}& C,C++,Python,Java,Bash\\
+\textsc{Web Based Technologies:}& MongoDB,MySQL,SQLite,JavaScript{Basic}\\
+\textsc{Web Front end Technologies:}& HTML,Bootstrap3\\
+\textsc{Tools:}& Git,Vim,LaTeX\\
+\end{tabular}
+
+%Section: projects
+\section{PROJECTS}
+\par
+{\textsc{ Apartment Booking} \hfill Aug 2014 - Feb 2015 \\
+\emph{ Mini-project “Apartment Sales” which is a online based flat booking website model.\\
+Software used: PHP and MYSQL} \\
+{\textsc{ Photolab Website} \hfill Sep 2015 - Feb 2015 \\
+\emph{photography based website {similar to Instagram} \\ 
+Software used: HTML, CSS, Java, Servlets and Jsp.} \\
+{\textsc{ Twitter Analysis} \hfill Dec 2016 - Feb 2017 \\
+\emph{Collect Streaming data from twitter and data analysis on mined data} \\ 
+Software used: HTML, CSS, Python, Flask.} 
+
+%Section: Scholarships and additional info
+\section{coursework}
+{\textsc{ Geo Spatial Analysis} \hfill Oct 2016 - Present \\
+\emph{ Aims to collect crowd sourced data and rates the users route on account of safety on map and suggests alternate safe routes .\\
+Software used: PostgreSQL and Qgis} \\
+{\textsc{ sketch to image Translation using GAN} \hfill Feb 2017 - Present \\
+\emph{Generate a colored image for given edge using Neural Network.}\\  
+Software/Languages used: Python,Bash,Tensorflow,TensorBoard.} \\
+
+%Section: Scholarships and additional info
+\section{Awards and Appreciation}
+\begin{tabular}{rl}
+{ \textsc{Apr} 2016 &1st position in the Mathematical decoding conducted at  ABACUS’16 by DCSE,CEG.}\\
+\textsc{Mar} 2017 & 3rd position in TIP Expo conducted by DIST,CEG.
+\end{tabular}
+
+\section{Interests}
+\begin{itemize}
+\item Algorithms and Data Structures
+\item Debugging and Solving Programs
+\item Database Management Systems
+\item Painting
+\end{itemize}.
+
+\section{clubs and Activities}
+MAADHAVAM CEG(Tamil Club CEG),\emph{Organiser.}\hfill Aug 2014 - Present\\
+CEGLUG(CEG Linux Users Group),\emph{Member.}\hfill Aug 2015 - Present
+
+\section{Volunteering}
+ National Service Scheme - CEG,\emph{Coordinator.} \hfill Jul 2014 - Aug 2015\\
+ ITRIX'16 Technical Symposium - CEG,\emph{Marketing Coordinator.}\hfill Jul 2015 - Aug 2016
+
+%Section: Languages
+\section{Languages}
+\begin{tabular}{rl}
+ \textsc{Tamil:}&Mothertongue\\
+\textsc{English:}&Fluent\\
+\textsc{Hindi:}&Fluent\\
+\end{tabular}
+
+
+\end{document}
+
